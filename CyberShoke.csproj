@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <PackageIcon>S6mlj04kJ8d_3g1tiE1G6w_xlU3DF0s14xpEHDbLnfsfif4RxlazMcHS5jehdM7HG6OCE78UzCLkDfrkTZBz73QD.jpg</PackageIcon>
+    <PackageIconUrl />
+    <Authors>AlexanderK</Authors>
+    <Company>KLGR125</Company>
+    <PackageId>CyberShokeServers</PackageId>
+    <Product>CyberShokeServers</Product>
+    <AssemblyName>CyberShokeServers</AssemblyName>
+    <Description>Open-source library to get csgo servers from cybershoke.net</Description>
+    <PackageTags>cybershoke, CyberShoke, CyberShokeServers</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <ApplicationIcon>S6mlj04kJ8d_3g1tiE1G6w_xlU3DF0s14xpEHDbLnfsfif4RxlazMcHS5jehdM7HG6OCE78UzCLkDfrkTZBz73QD.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\niode\Downloads\S6mlj04kJ8d_3g1tiE1G6w_xlU3DF0s14xpEHDbLnfsfif4RxlazMcHS5jehdM7HG6OCE78UzCLkDfrkTZBz73QD.jpg">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
