@@ -2,7 +2,7 @@
 
 namespace CyberShoke.Objects
 {
-    class Listmodes
+    public class Listmodes
     {
         [JsonProperty("0")]
         public string zero { get; set; }

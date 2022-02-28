@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace CyberShoke.Objects
 {
-    class Modes
+    public class Modes
     {
         [JsonProperty]
         public string name { get; set; }

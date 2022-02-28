@@ -2,7 +2,7 @@
 
 namespace CyberShoke.Objects._Modes
 {
-    class Description
+    public class Description
     {
         [JsonProperty]
         public string ru { get; set; }
