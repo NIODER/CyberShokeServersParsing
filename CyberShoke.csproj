@@ -6,13 +6,19 @@
     <PackageIconUrl />
     <Authors>AlexanderK</Authors>
     <Company>KLGR125</Company>
-    <PackageId>CyberShokeServers</PackageId>
-    <Product>CyberShokeServers</Product>
+    <PackageId>CyberShoke</PackageId>
+    <Product>CyberShoke</Product>
     <AssemblyName>CyberShokeServers</AssemblyName>
     <Description>Open-source library to get csgo servers from cybershoke.net</Description>
     <PackageTags>cybershoke, CyberShoke, CyberShokeServers</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <ApplicationIcon>S6mlj04kJ8d_3g1tiE1G6w_xlU3DF0s14xpEHDbLnfsfif4RxlazMcHS5jehdM7HG6OCE78UzCLkDfrkTZBz73QD.ico</ApplicationIcon>
+    <RepositoryUrl>https://github.com/NIODER/CyberShokeServersParsing</RepositoryUrl>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageLicenseFile>license.txt</PackageLicenseFile>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,6 +27,10 @@
 
   <ItemGroup>
     <None Include="C:\Users\niode\Downloads\S6mlj04kJ8d_3g1tiE1G6w_xlU3DF0s14xpEHDbLnfsfif4RxlazMcHS5jehdM7HG6OCE78UzCLkDfrkTZBz73QD.jpg">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="license.txt">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>

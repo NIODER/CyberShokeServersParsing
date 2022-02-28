@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace CyberShoke
 {
-    class CyberShoke
+    class CyberShokeServers
     {
         public Response obj { get; }
 
-        public CyberShoke()
+        public CyberShokeServers()
         {
             WebRequest request = WebRequest.Create("https://apiv2.cybershoke.net:2096/api/v3/servers/online");
             WebHeaderCollection headerCollection = new WebHeaderCollection();
