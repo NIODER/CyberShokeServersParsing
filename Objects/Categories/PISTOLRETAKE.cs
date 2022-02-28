@@ -9,6 +9,6 @@ namespace CyberShoke.Objects.Categories
         /// 9 SLOTS
         /// </summary>
         [JsonProperty("9 SLOTS")]
-        public List<Server> NineSlots { get; set; }
+        public IEnumerable<Server> NineSlots { get; set; }
     }
 }

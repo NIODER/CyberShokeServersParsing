@@ -9,16 +9,16 @@ namespace CyberShoke.Objects.Categories
         /// ONLY MIRAGE
         /// </summary>
         [JsonProperty("ONLY MIRAGE")]
-        public List<Server> OnlyMirage { get; set; }
+        public IEnumerable<Server> OnlyMirage { get; set; }
         /// <summary>
         /// ONLY DUST2
         /// </summary>
         [JsonProperty("ONLY DUST2")]
-        public List<Server> OnlyDust { get; set; }
+        public IEnumerable<Server> OnlyDust { get; set; }
         /// <summary>
         /// ALL MAPS
         /// </summary>
         [JsonProperty("ALL MAPS")]
-        public List<Server> AllMaps { get; set; }
+        public IEnumerable<Server> AllMaps { get; set; }
     }
 }

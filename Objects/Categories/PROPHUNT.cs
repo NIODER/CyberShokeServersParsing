@@ -6,6 +6,6 @@ namespace CyberShoke.Objects.Categories
     class PROPHUNT
     {
         [JsonProperty("")]
-        public List<Server> Servers { get; set; }
+        public IEnumerable<Server> Servers { get; set; }
     }
 }

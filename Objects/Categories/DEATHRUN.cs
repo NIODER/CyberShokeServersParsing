@@ -6,8 +6,8 @@ namespace CyberShoke.Objects.Categories
     class DEATHRUN
     {
         [JsonProperty]
-        public List<Server> EASY { get; set; }
+        public IEnumerable<Server> EASY { get; set; }
         [JsonProperty]
-        public List<Server> WARMUP { get; set; }
+        public IEnumerable<Server> WARMUP { get; set; }
     }
 }

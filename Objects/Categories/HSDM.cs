@@ -9,16 +9,16 @@ namespace CyberShoke.Objects.Categories
         /// HSDM LITE
         /// </summary>
         [JsonProperty("HSDM LITE")]
-        public List<Server> Lite { get; set; }
+        public IEnumerable<Server> Lite { get; set; }
         /// <summary>
         /// HSDM
         /// </summary>
         [JsonProperty("HSDM")]
-        public List<Server> Classic { get; set; }
+        public IEnumerable<Server> Classic { get; set; }
         /// <summary>
         /// HSDM ONETAP
         /// </summary>
         [JsonProperty("HSDM ONETAP")]
-        public List<Server> Onetap { get; set; }
+        public IEnumerable<Server> Onetap { get; set; }
     }
 }

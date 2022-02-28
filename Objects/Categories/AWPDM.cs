@@ -9,16 +9,16 @@ namespace CyberShoke.Objects.Categories
         /// AWPDM LITE
         /// </summary>
         [JsonProperty("AWPDM LITE")]
-        public List<Server> AwpDMLite { get; set; }
+        public IEnumerable<Server> AwpDMLite { get; set; }
         /// <summary>
         /// AWPDM
         /// </summary>
         [JsonProperty("AWPDM")]
-        public List<Server> AwpDM { get; set; }
+        public IEnumerable<Server> AwpDM { get; set; }
         /// <summary>
         /// NOSCOPEDM
         /// </summary>
         [JsonProperty("NOSCOPEDM")]
-        public List<Server> NoscopeDM { get; set; }
+        public IEnumerable<Server> NoscopeDM { get; set; }
     }
 }

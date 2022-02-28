@@ -2,7 +2,7 @@
 
 namespace CyberShoke.Objects
 {
-    class Server
+    public class Server
     {
         [JsonProperty]
         public int id { get; set; }
