@@ -35,7 +35,7 @@ namespace CyberShoke.Objects
         public string map { get; set; }
 
         [JsonProperty]
-        public int prime { get; set; }
+        public bool prime { get; set; }
 
         [JsonProperty]
         public int players { get; set; }
@@ -50,7 +50,7 @@ namespace CyberShoke.Objects
         public int faceit_avg { get; set; }
 
         [JsonProperty]
-        public int show_maps_avg_time { get; set; }
+        public bool show_maps_avg_time { get; set; }
 
         [JsonProperty]
         public int statusAlt { get; set; }
@@ -62,7 +62,7 @@ namespace CyberShoke.Objects
         public int? time_avg_complete { get; set; }
 
         [JsonProperty]
-        public int faceit_limiter_enable { get; set; }
+        public bool faceit_limiter_enable { get; set; }
 
         [JsonProperty]
         public int? faceit_min_elo { get; set; }

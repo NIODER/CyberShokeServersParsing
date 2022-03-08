@@ -9,16 +9,16 @@ namespace CyberShoke.Objects.Categories
         /// PISTOL HSDM
         /// </summary>
         [JsonProperty("PISTOL HSDM")]
-        public IEnumerable<Server> PistolHSDM { get; set; }
+        public IList<Server> PistolHSDM { get; set; }
         /// <summary>
         /// PISTOLDM LITE
         /// </summary>
         [JsonProperty("PISTOLDM LITE")]
-        public IEnumerable<Server> PistolDMLite { get; set; }
+        public IList<Server> PistolDMLite { get; set; }
         /// <summary>
         /// PISTOLDM
         /// </summary>
         [JsonProperty("PISTOLDM")]
-        public IEnumerable<Server> PistolsDM { get; set; }
+        public IList<Server> PistolsDM { get; set; }
     }
 }

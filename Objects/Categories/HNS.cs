@@ -9,16 +9,16 @@ namespace CyberShoke.Objects.Categories
         /// HNS SERVERS
         /// </summary>
         [JsonProperty("HNS SERVERS")]
-        public IEnumerable<Server> HNSServers { get; set; }
+        public IList<Server> HNSServers { get; set; }
         /// <summary>
         /// HNS NO RULES
         /// </summary>
         [JsonProperty("HNS NO RULES")]
-        public IEnumerable<Server> NoRules { get; set; }
+        public IList<Server> NoRules { get; set; }
         /// <summary>
         /// HNS TRAINING
         /// </summary>
         [JsonProperty("HNS TRAINING")]
-        public IEnumerable<Server> Training { get; set; }
+        public IList<Server> Training { get; set; }
     }
 }

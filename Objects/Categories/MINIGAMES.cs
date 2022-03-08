@@ -9,11 +9,11 @@ namespace CyberShoke.Objects.Categories
         /// FUN MAPS
         /// </summary>
         [JsonProperty("FUN MAPS")]
-        public IEnumerable<Server> FunMaps { get; set; }
+        public IList<Server> FunMaps { get; set; }
         /// <summary>
         /// BATTLE MAPS
         /// </summary>
         [JsonProperty("BATTLE MAPS")]
-        public IEnumerable<Server> BattleMaps { get; set; }
+        public IList<Server> BattleMaps { get; set; }
     }
 }

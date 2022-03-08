@@ -16,9 +16,12 @@
     <RepositoryUrl>https://github.com/NIODER/CyberShokeServersParsing</RepositoryUrl>
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageLicenseFile>license.txt</PackageLicenseFile>
-    <AssemblyVersion>1.0.0.1</AssemblyVersion>
-    <FileVersion>1.0.0.1</FileVersion>
-    <Version>1.1.1</Version>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <Version>2.0.0</Version>
+    <OutputType>Library</OutputType>
+    <StartupObject></StartupObject>
+    <PackageReleaseNotes>Add documentation, change types of some properties from int to bool</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

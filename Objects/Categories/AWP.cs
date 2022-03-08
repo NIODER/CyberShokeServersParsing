@@ -9,16 +9,16 @@ namespace CyberShoke.Objects.Categories
         /// AWP CANNONS
         /// </summary>
         [JsonProperty("AWP CANNONS")]
-        public IEnumerable<Server> AwpCannons { get; set; }
+        public IList<Server> AwpCannons { get; set; }
         /// <summary>
         /// ONLY AWP LEGO 2
         /// </summary>
         [JsonProperty("ONLY AWP LEGO 2")]
-        public IEnumerable<Server> OnlyAwpLego { get; set; }
+        public IList<Server> OnlyAwpLego { get; set; }
         /// <summary>
         /// AWP SERVERS
         /// </summary>
         [JsonProperty("AWP SERVERS")]
-        public IEnumerable<Server> AwpServers { get; set; }
+        public IList<Server> AwpServers { get; set; }
     }
 }

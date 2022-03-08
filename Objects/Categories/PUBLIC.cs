@@ -9,36 +9,36 @@ namespace CyberShoke.Objects.Categories
         /// ONLY DUST2
         /// </summary>
         [JsonProperty("ONLY DUST2")]
-        public IEnumerable<Server> OnlyDust { get; set; }
+        public IList<Server> OnlyDust { get; set; }
         /// <summary>
         /// ONLY MIRAGE
         /// </summary>
         [JsonProperty("ONLY MIRAGE")]
-        public IEnumerable<Server> OnlyMirage { get; set; }
+        public IList<Server> OnlyMirage { get; set; }
         /// <summary>
         /// NO LIMIT
         /// </summary>
         [JsonProperty("NO LIMIT")]
-        public IEnumerable<Server> NoLimit { get; set; }
+        public IList<Server> NoLimit { get; set; }
         /// <summary>
         /// COMPETITIVE MAPS
         /// </summary>
         [JsonProperty("COMPETITIVE MAPS")]
-        public IEnumerable<Server> Competitive { get; set; }
+        public IList<Server> Competitive { get; set; }
         /// <summary>
         /// WH ON
         /// </summary>
         [JsonProperty("WH ON")]
-        public IEnumerable<Server> WallHack { get; set; }
+        public IList<Server> WallHack { get; set; }
         /// <summary>
         /// ALL MAPS
         /// </summary>
         [JsonProperty("ALL MAPS")]
-        public IEnumerable<Server> AllMaps { get; set; }
+        public IList<Server> AllMaps { get; set; }
         /// <summary>
         /// DESTRUCTIBLE INFERNO
         /// </summary>
         [JsonProperty("DESTRUCTIBLE INFERNO")]
-        public IEnumerable<Server> DestructibleInferno { get; set; }
+        public IList<Server> DestructibleInferno { get; set; }
     }
 }

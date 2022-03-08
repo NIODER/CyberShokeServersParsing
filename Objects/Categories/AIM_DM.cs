@@ -6,11 +6,11 @@ namespace CyberShoke.Objects.Categories
     class AIM_DM
     {
         [JsonProperty]
-        public IEnumerable<Server> AIMDM { get; set; }
+        public IList<Server> AIMDM { get; set; }
         /// <summary>
         /// PISTOL AIMDM
         /// </summary>
         [JsonProperty("PISTOL AIMDM")]
-        public IEnumerable<Server> PistolAimDM { get; set; }
+        public IList<Server> PistolAimDM { get; set; }
     }
 }

@@ -6,6 +6,6 @@ namespace CyberShoke.Objects.Categories
     class ARENA
     {
         [JsonProperty("")]
-        public IEnumerable<Server> Servers { get; set; }
+        public IList<Server> Servers { get; set; }
     }
 }

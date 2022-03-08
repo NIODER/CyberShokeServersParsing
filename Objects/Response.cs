@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace CyberShoke.Objects
 {
@@ -14,9 +15,6 @@ namespace CyberShoke.Objects
         public Servers servers { get; set; }
 
         [JsonProperty]
-        public Modes modes { get; set; }
-
-        [JsonProperty]
-        public Listmodes listmodes { get; set; }
+        public Mode modes { get; set; }
     }
 }
