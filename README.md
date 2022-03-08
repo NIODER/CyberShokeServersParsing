@@ -1,6 +1,7 @@
 # CyberShokeServersParsing
 Library to parse cybershoke.net counter-strike servers
 
+Read raw
 
 
 Documentation:
