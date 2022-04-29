@@ -22,7 +22,7 @@ propreties:
 ______________________________________________________________________________________________
 type              |  property name        |    description                                   |
 __________________|_______________________|__________________________________________________|
-integer           |  id				      |    cybershoke id of this server                  |
+integer           |  id				            |    cybershoke id of this server                  |
 string            |  name_alt             |    name of server                                |
 string            |  ip                   |    address of server                             |
 integer           |  port                 |    port of server                                |
