@@ -5,12 +5,12 @@ namespace CyberShoke.Objects.Categories
 {
     class AIM_DM
     {
-        [JsonProperty]
+        [JsonProperty("")]
         public IList<Server> AIMDM { get; set; }
         /// <summary>
         /// PISTOL AIMDM
         /// </summary>
-        [JsonProperty("PISTOL AIMDM")]
+        [JsonProperty("PISTOL")]
         public IList<Server> PistolAimDM { get; set; }
     }
 }

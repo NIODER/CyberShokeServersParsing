@@ -17,13 +17,13 @@ namespace CyberShoke
 
         public CSServers()
         {
-            WebRequest request = WebRequest.Create("https://apiv2.cybershoke.net:2096/api/v3/servers/online");
+            WebRequest request = WebRequest.Create("https://api.cybershoke.net/api/v1/main/data");
             WebHeaderCollection headerCollection = new WebHeaderCollection();
             string[] headers = {
-                "Host: apiv2.cybershoke.net:2096",
+                "Host: api.cybershoke.net",
                 "Accept: application/json, text/plain, */*",
                 "Origin: https://cybershoke.net",
-                "Alt-Used: apiv2.cybershoke.net:2096",
+                "Alt-Used: api.cybershoke.net",
                 "Referer: https://cybershoke.net/",
                 "Sec-Fetch-Dest: empty",
                 "Sec-Fetch-Mode: cors",
@@ -39,6 +39,8 @@ namespace CyberShoke
             WebResponse response = request.GetResponse();
             Stream stream = response.GetResponseStream();
             string json = new StreamReader(stream).ReadToEnd();
+            JObject jsonObject = JObject.Parse(json);
+            json = jsonObject["data"]["modules"]["servers"]["data"].ToString();
             Json = JsonConvert.DeserializeObject<Response>(json);
 
             var modes = JObject.Parse(json).GetValue("modes").Children();
@@ -73,33 +75,16 @@ namespace CyberShoke
         public (IList<Server> AWP_CANNONS, IList<Server> ONLY_AWP_LEGO_2, IList<Server> AWP_SERVERS) GetAWP() =>
             (Json.servers.AWP.AwpCannons, Json.servers.AWP.OnlyAwpLego, Json.servers.AWP.AwpServers);
 
-        public (IList<Server> AWPDM_LITE, IList<Server> AWPDM, IList<Server> NOSCOPEDM) GetAWPDM() =>
-            (Json.servers.AWPDM.AwpDMLite, Json.servers.AWPDM.AwpDM, Json.servers.AWPDM.NoscopeDM);
+        public IList<Server> GetAWPDM() => Json.servers.AWPDM.AwpDM;
 
-        public (IList<Server> EASY, IList<Server> MEDIUM, IList<Server> HARD, IList<Server> LEGEMDARY, IList<Server> TICK) GetBHOP() =>
-            (Json.servers.BHOP.Easy, Json.servers.BHOP.Medium, Json.servers.BHOP.Hard, Json.servers.BHOP.Legendary, Json.servers.BHOP.Tick);
+        public (IList<Server> EASY, IList<Server> MEDIUM, IList<Server> HARD, IList<Server> LEGENDARY) GetBHOP() =>
+            (Json.servers.BHOP.Easy, Json.servers.BHOP.Medium, Json.servers.BHOP.Hard, Json.servers.BHOP.Legendary);
 
         public (IList<Server> EASY, IList<Server> WARMUP) GetDEATHRUN() =>
             (Json.servers.DEATHRUN.EASY, Json.servers.DEATHRUN.WARMUP);
 
-        public (IList<Server> EASY18,
-            IList<Server> EASY16,
-            IList<Server> EASY14,
-            IList<Server> LITE20,
-            IList<Server> LITE18,
-            IList<Server> LITE16,
-            IList<Server> SLOTS18,
-            IList<Server> SLOTS16,
-            IList<Server> NOAWP) GetDM() =>
-            (Json.servers.DM.EighteenSlotsLiteLowSkill,
-            Json.servers.DM.SixteenSlotsLiteLowSkill,
-            Json.servers.DM.FourteenSlotsLiteLowSkill,
-            Json.servers.DM.TwentySlotsLite,
-            Json.servers.DM.EighteenSlotsLite,
-            Json.servers.DM.SixteenSlotsLite,
-            Json.servers.DM.EighteenSlots,
-            Json.servers.DM.SixteenSlots,
-            Json.servers.DM.NoAwp);
+        public (IList<Server> Easy, IList<Server> Medium, IList<Server> Hard) GetDM() => 
+            (Json.servers.DM.Easy, Json.servers.DM.Medium, Json.servers.DM.Hard);
 
         public (IList<Server> ONLY_MIRAGE, IList<Server> ONLY_DUST2, IList<Server> ALL_MAPS) GetDUELS() =>
             (Json.servers.DUELS.OnlyMirage, Json.servers.DUELS.OnlyDust, Json.servers.DUELS.AllMaps);
@@ -112,26 +97,15 @@ namespace CyberShoke
         public (IList<Server> HNS_SERVERS, IList<Server> HNS_NO_RULES, IList<Server> HNS_TRAINING) GetHNS() =>
             (Json.servers.HNS.HNSServers, Json.servers.HNS.NoRules, Json.servers.HNS.Training);
 
-        public (IList<Server> HSDM_LITE, IList<Server> HSDM, IList<Server> HSDM_ONETAP) GetHSDM() =>
-            (Json.servers.HSDM.Lite, Json.servers.HSDM.Classic, Json.servers.HSDM.Onetap);
+        public IList<Server> GetHSDM() => Json.servers.HSDM.Classic;
 
         public (IList<Server> CT_16, IList<Server> CT_14, IList<Server> CT_0) GetJAIL() =>
             (Json.servers.JAIL.Sixteen, Json.servers.JAIL.Fourteen, Json.servers.JAIL.Zero);
 
         public IList<Server> GetKNIFE() => Json.servers.KNIFE.Servers;
 
-        public (IList<Server> TIMER_EASY,
-            IList<Server> GO_EASY,
-            IList<Server> TIMER_MEDIUM,
-            IList<Server> GO_MEDIUM,
-            IList<Server> TIMER_HARD,
-            IList<Server> GO_HARD) GetKZ() =>
-            (Json.servers.KZ.TimerLowSkill,
-            Json.servers.KZ.GoLowSkill,
-            Json.servers.KZ.TimerMiddle,
-            Json.servers.KZ.GoMiddle,
-            Json.servers.KZ.TimerAdvanced,
-            Json.servers.KZ.GoAdvanced);
+        public (IList<Server> GO_EASY, IList<Server> GO_MEDIUM, IList<Server> GO_HARD) GetKZ() =>
+            (Json.servers.KZ.GoLowSkill, Json.servers.KZ.GoMiddle, Json.servers.KZ.GoAdvanced);
 
         public IList<Server> GetMANIAC() => Json.servers.MANIAC.Servers;
 
@@ -140,8 +114,8 @@ namespace CyberShoke
 
         public IList<Server> GetMULTICFGDM() => Json.servers.MULTICFGDM.Servers;
 
-        public (IList<Server> PISTOL_HSDM, IList<Server> PISTOLDM_LITE, IList<Server> PISTOLDM) GetPISTOLDM() =>
-            (Json.servers.PISTOLDM.PistolHSDM, Json.servers.PISTOLDM.PistolDMLite, Json.servers.PISTOLDM.PistolsDM);
+        public (IList<Server> HSDM, IList<Server> MEDIUM) GetPISTOLDM() =>
+            (Json.servers.PISTOLDM.HSDM, Json.servers.PISTOLDM.Medium);
 
         public IList<Server> GetPISTOLRETAKE() => Json.servers.PISTOLRETAKE.NineSlots;
 
@@ -149,18 +123,14 @@ namespace CyberShoke
 
         public (IList<Server> ONLY_DUST2,
             IList<Server> ONLY_MIRAGE,
-            IList<Server> NO_LIMIT,
-            IList<Server> COMPETITIVE_MAPS,
+            IList<Server> TRENDING,
             IList<Server> WH_ON,
-            IList<Server> ALL_MAPS,
-            IList<Server> DESTRUCTIBLE_INFERNO) GetPUBLIC() =>
+            IList<Server> ALL_MAPS) GetPUBLIC() =>
             (Json.servers.PUBLIC.OnlyDust,
             Json.servers.PUBLIC.OnlyMirage,
-            Json.servers.PUBLIC.NoLimit,
-            Json.servers.PUBLIC.Competitive,
+            Json.servers.PUBLIC.Trending,
             Json.servers.PUBLIC.WallHack,
-            Json.servers.PUBLIC.AllMaps,
-            Json.servers.PUBLIC.DestructibleInferno);
+            Json.servers.PUBLIC.AllMaps);
 
         public (IList<Server> EASY,
             IList<Server> HARD,

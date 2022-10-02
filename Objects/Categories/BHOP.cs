@@ -11,11 +11,6 @@ namespace CyberShoke.Objects.Categories
         [JsonProperty("TIER 1-2 - EASY")]
         public IList<Server> Easy { get; set; }
         /// <summary>
-        /// 64 TICK
-        /// </summary>
-        [JsonProperty("64 TICK")]
-        public IList<Server> Tick { get; set; }
-        /// <summary>
         /// TIER 3-4 - MEDIUM
         /// </summary>
         [JsonProperty("TIER 3-4 - MEDIUM")]

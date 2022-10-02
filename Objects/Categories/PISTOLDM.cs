@@ -8,17 +8,12 @@ namespace CyberShoke.Objects.Categories
         /// <summary>
         /// PISTOL HSDM
         /// </summary>
-        [JsonProperty("PISTOL HSDM")]
-        public IList<Server> PistolHSDM { get; set; }
+        [JsonProperty("HSDM")]
+        public IList<Server> HSDM { get; set; }
         /// <summary>
         /// PISTOLDM LITE
         /// </summary>
-        [JsonProperty("PISTOLDM LITE")]
-        public IList<Server> PistolDMLite { get; set; }
-        /// <summary>
-        /// PISTOLDM
-        /// </summary>
-        [JsonProperty("PISTOLDM")]
-        public IList<Server> PistolsDM { get; set; }
+        [JsonProperty("MEDIUM")]
+        public IList<Server> Medium { get; set; }
     }
 }

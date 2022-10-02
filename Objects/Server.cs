@@ -69,5 +69,31 @@ namespace CyberShoke.Objects
 
         [JsonProperty]
         public int? faceit_max_elo { get; set; }
+
+        public override string ToString()
+        {
+            return $"id: {id},\n" +
+                $"name_alt: {name_alt},\n" +
+                $"ip: {ip},\n" +
+                $"port: {port},\n" +
+                $"mode: {mode},\n" +
+                $"modeAlt: {modeAlt},\n" +
+                $"num: {num},\n" +
+                $"location: {location},\n" +
+                $"country: {country},\n" +
+                $"map: {map},\n" +
+                $"prime: {prime},\n" +
+                $"players: {players},\n" +
+                $"maxplayers: {maxplayers},\n" +
+                $"status: {status},\n" +
+                $"faceit_avg: {faceit_avg},\n" +
+                $"show_maps_avg_time: {show_maps_avg_time},\n" +
+                $"statusAlt: {statusAlt},\n" +
+                $"category: {category},\n" +
+                $"time_avg_complete: {time_avg_complete},\n" +
+                $"faceit_limiter_enable: {faceit_limiter_enable},\n" +
+                $"faceit_min_elo: {faceit_min_elo},\n" +
+                $"faceit_max_elo: {faceit_max_elo}";
+        }
     }
 }

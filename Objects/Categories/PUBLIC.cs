@@ -18,13 +18,8 @@ namespace CyberShoke.Objects.Categories
         /// <summary>
         /// NO LIMIT
         /// </summary>
-        [JsonProperty("NO LIMIT")]
-        public IList<Server> NoLimit { get; set; }
-        /// <summary>
-        /// COMPETITIVE MAPS
-        /// </summary>
-        [JsonProperty("COMPETITIVE MAPS")]
-        public IList<Server> Competitive { get; set; }
+        [JsonProperty("TRENDING")]
+        public IList<Server> Trending { get; set; }
         /// <summary>
         /// WH ON
         /// </summary>
@@ -35,10 +30,5 @@ namespace CyberShoke.Objects.Categories
         /// </summary>
         [JsonProperty("ALL MAPS")]
         public IList<Server> AllMaps { get; set; }
-        /// <summary>
-        /// DESTRUCTIBLE INFERNO
-        /// </summary>
-        [JsonProperty("DESTRUCTIBLE INFERNO")]
-        public IList<Server> DestructibleInferno { get; set; }
     }
 }
