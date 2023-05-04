@@ -15,6 +15,7 @@ This is main class, contains:
 
 ______________________________________________________________________________________________
 
+```
 Server:
 Class with information of choosen server
 
@@ -22,7 +23,7 @@ propreties:
 ______________________________________________________________________________________________
 type              |  property name        |    description                                   |
 __________________|_______________________|__________________________________________________|
-integer           |  id				            |    cybershoke id of this server                  |
+integer           |  id                   |    cybershoke id of this server                  |
 string            |  name_alt             |    name of server                                |
 string            |  ip                   |    address of server                             |
 integer           |  port                 |    port of server                                |
@@ -101,3 +102,4 @@ ________________________________________________________________________________
 
 Functions:
 Functions returns tuple of IList<Server> if mode has different categories or just IList<Server> if not.
+```
