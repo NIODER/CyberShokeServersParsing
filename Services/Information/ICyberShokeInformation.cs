@@ -1,4 +1,5 @@
 ﻿using CyberShoke.Entities;
+using System;
 using System.Collections.Generic;
 
 namespace CyberShoke.Services.Information
@@ -9,5 +10,6 @@ namespace CyberShoke.Services.Information
         public string GetPolicyDocumentsType();
         public IEnumerable<string> GetLanguages();
         public IDictionary<string, string> GetCountries();
+        public DateTime GetLastUpdateTimeUtc();
     }
 }

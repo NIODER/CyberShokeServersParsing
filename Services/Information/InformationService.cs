@@ -1,6 +1,9 @@
 ﻿using CyberShoke.Entities;
+using CyberShoke.Infrastructure.Converters;
 using CyberShoke.Infrastructure.CyberShokeData;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 
 namespace CyberShoke.Services.Information
@@ -71,6 +74,19 @@ namespace CyberShoke.Services.Information
         private JToken GetSocialNetworksToken(JObject json)
         {
             return json["data"]["modules"]["social_networks"]["data"];
+        }
+
+        public DateTime GetLastUpdateTimeUtc()
+        {
+            JToken lastUpdateTimeToken = GetLastUpdateTimeToken(GetJson());
+            var serializer = new JsonSerializer();
+            serializer.Converters.Add(new DateTimeConverter());
+            return lastUpdateTimeToken.ToObject<DateTime>(serializer);
+        }
+
+        private JToken GetLastUpdateTimeToken(JObject json)
+        {
+            return json["data"]["modules"]["web_translation"]["data"]["unixtime_last_update"];
         }
     }
 }
